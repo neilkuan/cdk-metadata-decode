@@ -1,10 +1,9 @@
-# cdk-meta-data-decode
-
+# cdk-metadata-decode
 
 ### Example to use
 ```bash
 ### Get cdk metadata node version
-npx cdk-mdd 'v2:deflate64:H4sIAAAAAAAA/zWMyw6CMBBFv4V9HSiYuPUV1wY/wIztGKvtlPQhUcK/CxpX995zk9NABVJWxRrdm8vOdGQNU4Q9dda/HHE6JVQPIUGuaqgK59kr/YBhd+UjBnSUKIhp7Dxrk4xn0VL0OSgS2MfzYNFdNMIhs5rfLUYSyvqse0zqBsPGYnCz4FvGUUyimEJWaYZ/1yjYa4J7LJ9yCbWEprhHYxYhczKOoP3lB2nZwtTOAAAA'
+npx cdk-metadata-decode 'v2:deflate64:H4sIAAAAAAAA/zWMyw6CMBBFv4V9HSiYuPUV1wY/wIztGKvtlPQhUcK/CxpX995zk9NABVJWxRrdm8vOdGQNU4Q9dda/HHE6JVQPIUGuaqgK59kr/YBhd+UjBnSUKIhp7Dxrk4xn0VL0OSgS2MfzYNFdNMIhs5rfLUYSyvqse0zqBsPGYnCz4FvGUUyimEJWaYZ/1yjYa4J7LJ9yCbWEprhHYxYhczKOoP3lB2nZwtTOAAAA'
 
 NodeJS Version 👀 👀 👀 ...:  
 
@@ -12,7 +11,7 @@ node.js/v14.21.3!jsii-runtime.Runtime
 
 
 ### Get All cdk metadata
-npx cdk-mdd 'v2:deflate64:H4sIAAAAAAAA/zWMyw6CMBBFv4V9HSiYuPUV1wY/wIztGKvtlPQhUcK/CxpX995zk9NABVJWxRrdm8vOdGQNU4Q9dda/HHE6JVQPIUGuaqgK59kr/YBhd+UjBnSUKIhp7Dxrk4xn0VL0OSgS2MfzYNFdNMIhs5rfLUYSyvqse0zqBsPGYnCz4FvGUUyimEJWaYZ/1yjYa4J7LJ9yCbWEprhHYxYhczKOoP3lB2nZwtTOAAAA' -v
+npx npx cdk-metadata-decode 'v2:deflate64:H4sIAAAAAAAA/zWMyw6CMBBFv4V9HSiYuPUV1wY/wIztGKvtlPQhUcK/CxpX995zk9NABVJWxRrdm8vOdGQNU4Q9dda/HHE6JVQPIUGuaqgK59kr/YBhd+UjBnSUKIhp7Dxrk4xn0VL0OSgS2MfzYNFdNMIhs5rfLUYSyvqse0zqBsPGYnCz4FvGUUyimEJWaYZ/1yjYa4J7LJ9yCbWEprhHYxYhczKOoP3lB2nZwtTOAAAA' -v
 
 NodeJS Version 👀 👀 👀 ...:  
 
