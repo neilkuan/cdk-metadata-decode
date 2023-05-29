@@ -1,11 +1,23 @@
 const { typescript } = require('projen');
 const project = new typescript.TypeScriptProject({
   defaultReleaseBranch: 'main',
-  name: 'cdk-meta-data-decode',
-
-  // deps: [],                /* Runtime dependencies of this module. */
-  // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
-  // devDeps: [],             /* Build dependencies for this module. */
-  // packageName: undefined,  /* The "name" in package.json. */
+  majorVersion: 1,
+  name: 'cdk-metadata-decode',
+  releaseToNpm: true,
+  minNodeVersion: '16.0.0',
+  workflowNodeVersion: '16.14.0',
+  autoApproveOptions: {
+    allowedUsernames: ['auto-machine'],
+    secret: 'GITHUB_TOKEN',
+  },
+  sampleCode: false,
+  autoApproveUpgrades: true,
+  deps: [
+    'zlib',
+    'chalk@4.1.2',
+  ],
+  bin: {
+    'cdk-mdd': 'bin/cdk-mdd',
+  },
 });
 project.synth();
