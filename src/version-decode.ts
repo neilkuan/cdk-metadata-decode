@@ -1,6 +1,4 @@
 import * as zlib from 'zlib';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import chalk from 'chalk';
 class StringBuilder {
   private readonly parts = new Array<string>();
   constructor() {
@@ -56,18 +54,10 @@ function decodePrefixEncodedString(x: string) {
 }
 
 
-export function CDKMetaDataDeCoder(analytics: string, args?: boolean) {
+export function CDKMetaDataDeCoder(analytics: string):string[] {
   const buf = Buffer.from(analytics.split(':').splice(2)[0], 'base64');
   const analyticsString = zlib.gunzipSync(buf).toString();
   const constructInfo = decodePrefixEncodedString(analyticsString);
-  console.log('\n');
-  console.log(chalk.yellowBright('NodeJS Version 👀 👀 👀 ...:  \n'));
-  console.log(chalk.greenBright(constructInfo.filter((i: string)=>(
-    i.startsWith('node.js')
-  ))[0]), '\n');
 
-  if (args) {
-    console.log(chalk.yellowBright('ALL CDK MetaData'));
-    console.log(constructInfo);
-  }
+  return constructInfo;
 }
