@@ -8,7 +8,7 @@ const project = new typescript.TypeScriptProject({
   workflowNodeVersion: '16.14.0',
   autoApproveOptions: {
     allowedUsernames: ['auto-machine'],
-    secret: 'GITHUB_TOKEN',
+    secret: 'AUTO_MACHINE_TOKEN',
   },
   sampleCode: false,
   autoApproveUpgrades: true,
