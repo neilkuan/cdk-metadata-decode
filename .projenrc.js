@@ -9,6 +9,7 @@ const project = new typescript.TypeScriptProject({
     allowedUsernames: ['auto-machine'],
     secret: 'PROJEN_GITHUB_TOKEN',
   },
+  repository: 'https://github.com/neilkuan/cdk-metadata-decode',
   depsUpgradeOptions: {
     workflowOptions: {
       projenCredentials: github.GithubCredentials.fromPersonalAccessToken({

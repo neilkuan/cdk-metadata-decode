@@ -1,5 +1,9 @@
 {
   "name": "cdk-metadata-decode",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neilkuan/cdk-metadata-decode"
+  },
   "bin": {
     "cdk-mdd": "bin/cdk-mdd"
   },
