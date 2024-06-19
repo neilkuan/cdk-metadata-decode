@@ -4,8 +4,7 @@ const project = new typescript.TypeScriptProject({
   majorVersion: 1,
   name: 'cdk-metadata-decode',
   releaseToNpm: true,
-  minNodeVersion: '16.0.0',
-  workflowNodeVersion: '16.14.0',
+  workflowNodeVersion: '^20',
   autoApproveOptions: {
     allowedUsernames: ['auto-machine'],
     secret: 'PROJEN_GITHUB_TOKEN',
