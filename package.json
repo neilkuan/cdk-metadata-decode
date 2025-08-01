@@ -42,7 +42,7 @@
     "jest-junit": "^16",
     "projen": "^0.95.0",
     "ts-jest": "^29.4.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.2"
   },
   "dependencies": {
     "chalk": "4.1.2",
