@@ -19,6 +19,9 @@ const project = new typescript.TypeScriptProject({
   },
   sampleCode: false,
   autoApproveUpgrades: true,
+  npmProvenance: true,
+  npmTokenSecret: '',
+  npmTrustedPublishing: true,
   deps: [
     'zlib',
     'chalk@4.1.2',
@@ -27,4 +30,17 @@ const project = new typescript.TypeScriptProject({
     'cdk-mdd': 'bin/cdk-mdd',
   },
 });
+
+// Add registry-url to setup-node in release_npm job for OIDC Trusted Publishing
+const releaseWorkflow = project.release.publisher.project.tryFindObjectFile('.github/workflows/release.yml');
+if (releaseWorkflow) {
+  releaseWorkflow.addOverride('jobs.release_npm.steps.0.with.registry-url', 'https://registry.npmjs.org');
+}
+
+// Add provenance to publishConfig in package.json
+project.package.addField('publishConfig', {
+  access: 'public',
+  provenance: true,
+});
+
 project.synth();
