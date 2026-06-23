@@ -31,6 +31,9 @@ const project = new typescript.TypeScriptProject({
   },
 });
 
+// Allow .projenrc.js to be linted under typescript-eslint projectService (not in any tsconfig)
+project.eslint.allowDefaultProjectFiles('.projenrc.js');
+
 // Add registry-url to setup-node in release_npm job for OIDC Trusted Publishing
 const releaseWorkflow = project.release.publisher.project.tryFindObjectFile('.github/workflows/release.yml');
 if (releaseWorkflow) {
