@@ -3,8 +3,9 @@ const project = new typescript.TypeScriptProject({
   defaultReleaseBranch: 'main',
   majorVersion: 1,
   name: 'cdk-metadata-decode',
+  packageManager: 'yarn_classic',
   releaseToNpm: true,
-  workflowNodeVersion: '^20',
+  workflowNodeVersion: '^24',
   autoApproveOptions: {
     allowedUsernames: ['auto-machine'],
     secret: 'PROJEN_GITHUB_TOKEN',
